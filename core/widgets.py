@@ -70,7 +70,7 @@ class TagsEditor(Widget):
         tag_names = set(
             x["name"] for x in (result.get("widget", {}).get("value", None) or [])
         )
-        quick_suggestion_tags = [t for t in most_tags if t.name not in tag_names][:5]
+        quick_suggestion_tags = [t for t in most_tags if t.name not in tag_names][:10]
 
         result["widget"]["tag_suggestions"] = {
             "quick": [
