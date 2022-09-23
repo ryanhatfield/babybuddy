@@ -393,7 +393,7 @@ class Note(models.Model):
     child = models.ForeignKey(
         "Child", on_delete=models.CASCADE, related_name="note", verbose_name=_("Child")
     )
-    note = models.TextField(verbose_name=_("Note"))
+    note = models.TextField(blank=True, null=True, verbose_name=_("Note"))
     time = models.DateTimeField(
         blank=False, default=timezone.localtime, verbose_name=_("Time")
     )
